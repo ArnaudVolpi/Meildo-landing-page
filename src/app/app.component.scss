@@ -149,10 +149,19 @@
         margin: 0px;
     }
 
-    .external-link {
-        text-decoration: underline;
+    img.mockup-duo{
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 3px 6px 6px rgb(0 0 0 / 8%);
     }
 
+    .mock-1{
+        margin-left: -250px;
+        margin-bottom: -100px
+    }
+    .mock-2{
+        position: absolute;
+    }
     p {
         font-size: 17px;
         color: rgb(94, 94, 94);
@@ -206,6 +215,7 @@
             img {
                 height: 620px;
                 width: 285px;
+                border-radius: 10px;
             }
         }
     }
