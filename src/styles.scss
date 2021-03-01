@@ -57,6 +57,9 @@ ul.heading {
 button:focus,button:hover{
     outline:0;
 }
+.home-mockup{
+    margin-top: -75px;
+}
 
 /*==========================================================
                 NAVBAR 
@@ -119,6 +122,10 @@ button:focus,button:hover{
     text-decoration: none;
     width: 10%;
     margin-right: 50px;
+}
+.navbar .darklogo{
+    margin-top: -75px;
+    margin-bottom: -100px;
 }
 /* menu */
 .navbar .menu {
