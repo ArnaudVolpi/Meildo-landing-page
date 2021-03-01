@@ -12,7 +12,7 @@
     <label class="menu-icon" for="menu-btn" [ngClass]="{'navbarExpand': isChecked }"><span
         class="navicon"></span></label>
     <ul class="menu">
-      <li><a (click)="scrollToElement(meildo)">Notre projet</a></li>
+      <li><a (click)="scrollToElement(meildo)">Meildo</a></li>
       <li><a (click)="scrollToElement(features)">Fonctionnalités</a></li>
       <li><a (click)="scrollToElement(mockup)">Demo</a></li>
       <li><a (click)="scrollToElement(contact)">Contact</a></li>
@@ -44,7 +44,7 @@
 
         <!-- Mockup -->
         <div class="home-mockup" fxLayoutAlign="center" fxFlex="100%" fxFlex.gt-sm='40%' fxLayoutGap="32px">
-          <img src="assets/img/HomeLanding.png" alt="mockup" width="75%">
+          <img src="assets/img/home/HomeLanding.png" alt="mockup" width="75%">
         </div>
 
       </div>
@@ -120,7 +120,7 @@
         fxLayoutAlign="center center">
         <!-- Img -->
         <div fxLayout="column" fxFlex="50%" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
-          <img src="assets/img/featuresIMG.png" alt="app" width="60%">
+          <img src="assets/img/features/featuresIMG.png" alt="app" width="60%">
         </div>
         <!-- Text -->
         <div fxLayout="column" fxFlex="100%" fxFlex.gt-sm='50%' fxLayoutAlign="start  center">
@@ -191,26 +191,26 @@
       <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutGap.gt-sm="0px" fxLayoutAlign="center center">
 
         <div class="mockup_wrap">
-          <img src="https://www.ekko-wp.com/static/wp-content/uploads/sites/3/2018/11/mockup.png" alt="mockup">
+          <img src="assets/img/mockup//mockup.png" alt="mockup">
         </div>
 
         <drag-scroll #nav [drag-disabled]="true">
           <div drag-scroll-item></div>
           <div drag-scroll-item></div>
           <div drag-scroll-item>
-            <img src="assets/img/mock2.PNG" />
+            <img src="assets/img/mockup/mock2.PNG" />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mock3.PNG" />
+            <img src="assets/img/mockup/mock3.PNG" />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/test.png" />
+            <img src="assets/img/mockup/mock1.png" />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mock4.PNG" />
+            <img src="assets/img/mockup/mock4.PNG" />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mock5.PNG" />
+            <img src="assets/img/mockup/mock5.PNG" />
           </div>
           <div drag-scroll-item></div>
           <div drag-scroll-item></div>
@@ -260,7 +260,7 @@
       </div>
       <!-- Img -->
       <div fxLayout="column" fxFlex="50%" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
-        <img src="assets/img/undraw_mobile_testing_reah.png" alt="app" width="80%">
+        <img src="assets/img/team/team.svg" alt="app" width="60%">
       </div>
     </div>
 
@@ -291,14 +291,16 @@
           <input type="email" placeholder="Ton adresse mail" class="contact-input" formControlName="email"
             [email]="true">
           <div class="submit-wrapper">
-            <button type="submit" [disabled]="contactForm.controls.email.errors || contactForm.controls.email.value==''">Valider</button>
+            <button type="submit"
+              [disabled]="contactForm.controls.email.errors || contactForm.controls.email.value=='' || contactForm.controls.email.value==null">Valider</button>
           </div>
 
         </form>
         <span *ngIf="contactForm.controls.email.errors" class="contact-error">
           Veuillez entrer une adresse mail valide :D
         </span>
-        <div class="snackbar" [ngClass]="{show: showSnack}" (click)="showSnack=false"><i class="fas fa-paper-plane"></i> Votre adresse a bien été
+        <div class="snackbar" [ngClass]="{show: showSnack}" (click)="showSnack=false"><i class="fas fa-paper-plane"></i>
+          Votre adresse a bien été
           enregistrée !</div>
 
       </div>
@@ -312,7 +314,7 @@
 
       <div class="footer-item" fxFlex='50' fxFlex.gt-sm='15%'>
         <h3>Meildo</h3>
-        <p>Le réseau social 100% étudiants ! </p>
+        <p>Le réseau social 100% étudiants ! <br> Crée par des étudiants pour les étudiants.</p>
       </div>
 
       <div class="footer-item" fxFlex='50' fxFlex.gt-sm='15%'>
@@ -328,8 +330,7 @@
           </li>
           <li>
             <a href="https://www.facebook.com/meildo.network" target="blank">
-              <i class="fab fa-facebook-f"></i>
-              Facebook
+              <i class="fab fa-facebook-f"></i>Facebook
             </a>
           </li>
         </ul>

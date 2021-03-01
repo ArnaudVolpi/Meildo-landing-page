@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DragScrollComponent } from 'ngx-drag-scroll';
+import { Apollo, gql } from 'apollo-angular';
 
 @Component({
   selector: 'app-root',
@@ -12,21 +13,31 @@ export class AppComponent {
   showSnack = false;
 
   /* ------- Contact ------- */
-  constructor(public fb: FormBuilder) { }
+  constructor(public fb: FormBuilder, private apollo: Apollo) { }
   ngOnInit() {
     this.contactForm = this.fb.group({
       email: new FormControl(''),
     })
   }
   registerNewsLetter() {
-    console.log('registed')
-    this.contactForm.reset();
-    this.showSnack = true;
-
+    this.apollo.mutate({
+      mutation: gql`
+        mutation addToMailingList($email: String!) {
+          addToMailingList(email: $email) {
+          email
+          }
+        }
+      `,
+      variables: {
+        email: this.contactForm.controls['email'].value,
+      },
+    }).subscribe(() => {
+      this.contactForm.reset();
+      this.showSnack = true;
+    });
     setTimeout(() => {
       this.showSnack = false;
     }, 3000);
-
   }
 
 
