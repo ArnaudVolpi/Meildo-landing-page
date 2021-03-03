@@ -2,9 +2,9 @@
   <div class="container" fxFlex='100%'>
     <a href="" class="logo">
       <h2 [ngClass]="{'NavbarExpand': isChecked }">
-        <img src="assets/logoInline.png" alt="logo" width="200px" *ngIf="!isChecked;else darkLogo">
+        <img src="assets/logoInline.webp" alt="logo" width="200px" *ngIf="!isChecked;else darkLogo">
         <ng-template #darkLogo>
-          <img src="assets/logoInlineMobile.png" alt="darklogo" class="darklogo" width="200px">
+          <img src="assets/logoInlineMobile.webp" alt="darklogo" class="darklogo" width="200px">
         </ng-template>
       </h2>
     </a>
@@ -25,7 +25,7 @@
 
   <section class="home">
     <div class="container" fxFlex='95%' fxFlex.gt-sm='85%' fxLayoutAlign="center  center">
-      <div fxLayout="column" fxLayout.gt-xs="row wrap" fxLayoutGap="32px" fxLayoutGap.gt-sm="0px"
+      <div fxLayout="column" fxLayout.gt-sm="row wrap" fxLayoutGap="32px" fxLayoutGap.gt-sm="0px"
         fxLayoutAlign="center center" class="home-column">
 
         <!-- Text -->
@@ -43,8 +43,8 @@
         </div>
 
         <!-- Mockup -->
-        <div class="home-mockup" fxLayoutAlign="center" fxFlex="100%" fxFlex.gt-sm='40%'>
-          <img src="assets/img/home/landing.png" alt="mockup" >
+        <div class="home-mockup" fxLayoutAlign="center center" fxFlex="100%" fxFlex.gt-sm='40%'>
+          <img src="assets/img/home/landing.webp" alt="mockup">
         </div>
 
       </div>
@@ -87,7 +87,7 @@
       </div>
       <!-- Img -->
       <div fxLayout="column" fxFlex="50%" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
-        <!-- <img src="assets/img/meildo.png" alt="app" width="60%">  -->
+        <!-- <img src="assets/img/meildo.webp" alt="app" width="60%">  -->
 
         <div class="circle-wrapper">
 
@@ -120,8 +120,8 @@
         fxLayoutAlign="center center">
         <!-- Img -->
         <div fxLayout="column" fxFlex="50%" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
-          <img src="assets/img/mockup/mock3.png" alt="app" class="mockup-duo mock-1">
-          <img src="assets/img/mockup/mock2.png" alt="app" class="mockup-duo mock-2">
+          <img src="assets/img/mockup/mock3.webp" alt="app" class="mockup-duo mock-1">
+          <img src="assets/img/mockup/mock2.webp" alt="app" class="mockup-duo mock-2">
         </div>
         <!-- Text -->
         <div fxLayout="column" fxFlex="100%" fxFlex.gt-sm='50%' fxLayoutAlign="start  center">
@@ -159,7 +159,7 @@
                 </div>
                 <h3>Participe à des événements</h3>
               </div>
-              <p>Créer, rejoins des événements et partage ces moments avec des étudiants ayant les mêmes centres
+              <p>Crée, rejoins des événements et partage ces moments avec des étudiants ayant les mêmes centres
                 d'intérêts. </p>
             </div>
             <!-- / Item -->
@@ -173,7 +173,7 @@
                 </div>
                 <h3>Retrouve toutes les infos de ton campus</h3>
               </div>
-              <p>Retrouve en un clique toutes les infos, événements de ton campus et ne manque plus aucun bon plan. </p>
+              <p>Retrouve en un clique toutes les informations, événements de ton campus et ne manque plus aucun bon plan. </p>
             </div>
             <!-- / Item -->
 
@@ -189,29 +189,34 @@
 
   <section class="mockup" #mockup ngsReveal>
     <div class="container" fxFlex='100%'>
-      <div fxLayout="row wrap" fxLayoutGap="0px" fxLayoutGap.gt-sm="0px" fxLayoutAlign="center center">
+      <div fxLayout="row wrap"  fxLayoutAlign="center center">
 
         <div class="mockup_wrap">
-          <img src="assets/img/mockup//mockup.png" alt="mockup">
+          <img src="assets/img/mockup/mockup.webp" alt="mockup"  fxHide fxShow.gt-lg>
         </div>
 
         <drag-scroll #nav [drag-disabled]="true">
           <div drag-scroll-item></div>
           <div drag-scroll-item></div>
           <div drag-scroll-item>
-            <img src="assets/img/mockup/mock2.png" />
+            <img src="assets/img/mockup/Mock2Mobile.webp" fxShow fxHide.gt-lg class="mock-mobile" />
+            <img src="assets/img/mockup/mock2.webp" fxHide fxShow.gt-lg  />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mockup/mock3.png" />
+            <img src="assets/img/mockup/Mock3Mobile.webp"fxShow fxHide.gt-lg  class="mock-mobile"/>
+            <img src="assets/img/mockup/mock3.webp" fxHide fxShow.gt-lg  />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mockup/mock1.png" />
+            <img src="assets/img/mockup/Mock1Mobile.webp"fxShow fxHide.gt-lg class="mock-mobile"/>
+            <img src="assets/img/mockup/mock1.webp" fxHide fxShow.gt-lg  />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mockup/mock4.png" />
+            <img src="assets/img/mockup/Mock4Mobile.webp" fxShow fxHide.gt-lg class="mock-mobile" />
+            <img src="assets/img/mockup/mock4.webp" fxHide fxShow.gt-lg  />
           </div>
           <div drag-scroll-item>
-            <img src="assets/img/mockup/mock5.png" />
+            <img src="assets/img/mockup/Mock5Mobile.webp" fxShow fxHide.gt-lg class="mock-mobile"/>
+            <img src="assets/img/mockup/mock5.webp" fxHide fxShow.gt-lg  />
           </div>
           <div drag-scroll-item></div>
           <div drag-scroll-item></div>
